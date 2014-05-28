@@ -1,0 +1,9 @@
+This scraper converts the "ATOC National Routeing (sic) Guide":http://www.atoc.org/about-atoc/rail-settlement-plan/routeing-guide into a potentially-useful database.
+
+The tables @groups@ and @routing_points@ contain information from the “pink pages” (section B), namely which stations are members of which groups, and which routeing points are associated with each station.
+
+The @permitted_routes@ table is based on the “yellow pages” (section C), and contains, for each pair of routeing points, records describing each of the permitted lists of maps between them, or the magic word @LONDON@.
+
+The @rp_maps@ table is based on the "Routeing Points Table", which lists for each routeing point which maps it appears on.
+
+The @maps@ table contains all of the maps from the routing guide.  No attempt is made to interpret them: each page is rendered as a PNG and stored (base64-encoded) along with the two-letter map name and the page number (to distinguish maps spread over more than one page).
